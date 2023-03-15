@@ -1,27 +1,29 @@
-// allow function hello
-const hello = () => {
-    console.log("Hi how are u")
+function onePlusAverage(x, y){         // normal function 
+    return 1+(x+y)/2
 }
 
-// function one Plus Average
-function onePlusAvg(x, y){
-    return Math.round(1+(x+y)/2);
+const sum = (p, q) =>{                 //arrow function
+    return p+q
+}
+
+const hello = () => {                  // no return function
+    console.log("Hey how are you?")
 }
 
 
-// function sum
-const sum = (p, q) =>{
-    return p + q;
+const hi = () => {                      // return function
+    return "hi"
 }
 
 let a = 1;
 let b = 2;
 let c = 3;
-let v = hello();
 
-console.log(v);
+console.log(onePlusAverage(a, b));
+console.log(onePlusAverage(b, c));
+console.log(onePlusAverage(c, a));
+console.log(sum(9, 7));
+console.log(sum(10, 3));
 hello();
-console.log("Average of a and b is",onePlusAvg(a, b));
-console.log("Average of b and c is",onePlusAvg(b, c));
-console.log("Average of c and a is",onePlusAvg(c, a));
-console.log("sum = ",sum(9, 7));
+const v = hi();
+console.log(v);
